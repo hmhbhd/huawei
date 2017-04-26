@@ -487,6 +487,9 @@ p.txt-content {
     display: block; }
 
   #hideUl {
-    display: none; } }
+    display: none; }
+
+  .video-title h3 {
+    font-size: 20px; } }
 
 /*# sourceMappingURL=index.css.map */

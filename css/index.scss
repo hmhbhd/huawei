@@ -1,12 +1,12 @@
 $paddingLeftVal:15px;
 $red:#e22835;
-$fontSize:20px;
 $gray:#333;
 $blue:#006ad0;
 $graybc:#f1f1f1;
 $white:#fff;
 $deepred :#b02d2e;
 $opacityBlack:rgba(0, 0, 0, 0.48);
+$fontSize:20px;
 @mixin background{
 	width: 100%;
 	background-repeat:no-repeat;
@@ -21,6 +21,8 @@ $opacityBlack:rgba(0, 0, 0, 0.48);
 	right: $right;
 	bottom:$bottom;
 }
+
+
 body{
 	font-family: Microsoft YaHei;
 	 overflow-x: hidden;
@@ -539,5 +541,8 @@ li.fonterIcon img{
 }
 #hideUl{
 	display: none;
+}
+.video-title h3 {
+    font-size: $fontSize;
 }
 }

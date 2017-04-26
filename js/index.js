@@ -67,7 +67,13 @@ var tab05=new Vue({
 		items:tabVal05,
 	}
 })
+
 //导航滑动到顶部固定
+var wrapWidth=$(window).width()
+if (wrapWidth>760) {
+	fixedTop();
+}
+function fixedTop(){
 var a = $("#nav").offset().top;//获取div距离浏览器顶部高度
 //绑定浏览器滚动事件
 $(window).scroll(function() {
@@ -84,6 +90,7 @@ $(window).scroll(function() {
         $("#nav").css({"position":"relative","left":"0","top":"0px","right":"0px"});//当浏览器高度小于div原高度时去除浮动跟随,定位回到原位置
     }
 });
+}
 /*手风琴导航*/
 var sideMenuVal=[
 /*{
@@ -183,6 +190,7 @@ $(".navbar-toggle.collapsed").click(function() {
 	// if ($(".contaner-full.sideMenu").is(":hidden")) {
 		 $(".contaner-full.sideMenu").show();
 		 $(".contaner-full.sideMenu").animate({left:0});
+		 $(".container-full").hide();
 	// }
  
 	
@@ -191,6 +199,7 @@ $("#close").click(function(){
 
 $(".contaner-full.sideMenu").animate({left:"120%"});
 $(".contaner-full.sideMenu").hide();
+ $(".container-full").show();
 })
 //banner高度
 function getBannerHigh(){
