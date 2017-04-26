@@ -1,0 +1,479 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="css/index.css">
+<link rel="stylesheet" type="text/css" href="font/iconfont.css">
+<!-- 视频 -->
+<link rel="stylesheet" type="text/css" href="plugin/video5.18.4.js/css/video-js.css">
+<script type="text/javascript" src="plugin/video5.18.4.js/js/videojs-ie8.min.js"></script>
+
+</head>
+<body>
+<div class="container-full">
+<!-- 导航 -->
+<div class="topNav">
+	<div class="pull-right">  
+		<a href="" class="topA  alink">选择区域/语言</a>
+		<a href="" class="topA alink">登录</a>
+		<a href="" class="topA alink">注册</a>
+	</div>
+</div>
+	<div class="navbar navbar-default" id="nav">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-target="" aria-expanded="false" data-toggle="collapse">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			</button>
+			<img class="navbar-brand" src="images/logo.png">
+		</div>
+	          <div class="collapse navbar-collapse" id="navbarCollapsed">
+	          		<ul class="nav navbar-nav">
+	          			<li role="presentation"  class="firstNavLi">
+	          			     <a href="#tapContent01" class="firstNav" aria-controls="tapContent01" role="tab" data-toggle="tab"><i class="iconfont navIcon">&#xe600;</i>我想...</a>
+	          			</li>
+	          			<li role="presentation"  class="navTxt">
+	          			    <a href="#tapContent02"   aria-controls="tapContent02" role="tab" data-toggle="tab">个人及家用产品</a>
+	          			</li>
+	          			<li role="presentation"  class="navTxt">
+	          			   <a href="#tapContent03" aria-controls="tapContent03" role="tab" data-toggle="tab">商用解决方案</a>
+	          			</li>
+	          			<li role="presentation"  class="navTxt">
+	          			   <a href="#tapContent04" aria-controls="tapContent04" role="tab" data-toggle="tab">技术支持</a>
+	          			</li>
+	          			<li role="presentation"  class="navTxt">
+	          			   <a href="#tapContent05" aria-controls="tapContent05" role="tab" data-toggle="tab">合作伙伴</a>
+	          			</li>
+	          			<li role="presentation"  class="navTxt">
+	          			   <a href="#tapContent06" aria-controls="tapContent06" role="tab" data-toggle="tab">开发者</a>
+	          			</li>
+	          			<li role="presentation"  class="navTxt">
+	          			   <a href="#tapContent07" aria-controls="tapContent07" role="tab" data-toggle="tab">华为商城</a>
+	          			</li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href=""><span class="glyphicon glyphicon-search"></span></a></li>
+			</ul>
+	          </div>
+	</div>
+	 <div class="tab-content">
+		    <div role="tabpanel" class="tab-pane huaweiPane" id="tapContent01" >
+		    	<div class="row  leftBlock" >
+		    		<div class="col-sm-3  rowPadding" v-for="item in items" v-bind:id="item.id">
+		    			<div class="row">
+		    				<div class="col-sm-4 tabpanel" v-show="item.showImg">
+		    					<img class="img-responsive imgInline" v-bind:src="item.img">
+		    				</div>
+		    				<div class="col-sm-8">
+							<ul class="list-unstyled">
+								<li class="lists"><a class="alink">{{item.text01}}</a></li>
+								<li class="lists"><a class="alink">{{item.text02}}</a></li>
+								<li class="lists"><a class="alink">{{item.text03}}</a></li>
+								<li class="lists"><a class="alink">{{item.text04}}</a></li>
+								<li class="lists"><a class="alink">{{item.text05}}</a></li>
+								<li class="lists"><span class="lastLi">{{item.ahref}}</span></li>
+							</ul>
+		    				</div>
+		    			</div>
+		    		</div>
+
+		    	</div>
+		    </div>
+		  <div role="tabpanel" class="tab-pane " id="tapContent02" >
+		  	<div class="row leftBlock">
+		  		<div class="col-sm-2 itemWrap"  v-for="item in items">
+		  			<div class="col-sm-12 text-center itemTitle">{{item.title}}</div>
+		  			<div class="col-sm-12 text-center imgBox"><img v-bind:src="item.img" class="img-responsive imgInline"></div>
+		  			<div class="col-sm-12 text-center itemName"><a href="" class="alink">{{item.name}}</a></div>
+		  			<div class="col-sm-12 text-center  viewMore"><span class="lastLi">查看更多></span></div>
+		  		</div>
+		  	</div>
+		  </div>
+		  <div role="tabpanel" class="tab-pane" id="tapContent03">
+		  	<div class="row leftBlock">
+		  	       		<div class="col-sm-2 col-sm-2-5" v-for="item in items">
+		  			<div class="col-sm-12 itemTitle">{{item.title}}</div>
+		  			<div class="col-sm-12"><a class="alink">{{item.text01}}</a></div>
+		  			<div class="col-sm-12"><a class="alink">{{item.text02}}</a></div>
+		  			<div class="col-sm-12"><a class="alink">{{item.text03}}</a></div>
+		  			<div class="col-sm-12"><a class="alink">{{item.text04}}</a></div>
+		  			<div class="col-sm-12"><a class="alink">{{item.text05}}</a></div>
+		  			<div class="col-sm-12"><a class="alink">{{item.text06}}</a></div>
+		  			<div class="col-sm-12"><a class="alink">{{item.text07}}</a></div>
+		  			<div class="col-sm-12"><a class="alink">{{item.text08}}</a></div>
+		  			<div class="col-sm-12 more" v-show="item.showMore"><span class="lastLi">查看更多></span></div>
+		  		</div>
+
+		  	</div>
+		  </div>
+		  <div role="tabpanel" class="tab-pane" id="tapContent04">
+		       <div class="row leftBlock">
+		       	<div class="col-sm-8  borderRight">
+		       		<div class="row">
+		       			<div class="col-sm-4 hoverBack" v-for="item in items"  >
+		       			
+		  			<div class="col-sm-12 itemTitle">{{item.title}}</div>
+		  			<div class="col-sm-12"><a class="alink">{{item.text01}}</a></div>
+		  			<div class="col-sm-12"><a class="alink">{{item.text02}}</a></div>
+		  			<div class="col-sm-12"><a class="alink">{{item.text03}}</a></div>
+		  			<div class="col-sm-12"><a class="alink">{{item.text04}}</a></div>
+		  			<div class="col-sm-12"><a class="alink">{{item.text05}}</a></div>
+		  			<div class="col-sm-12"><a class="alink">{{item.text06}}</a></div>
+		  			<div class="col-sm-12"><a class="alink">{{item.text07}}</a></div>
+		  			<div class="col-sm-12 more"><span class="lastLi">查看更多></span></div>
+		       			</div>
+		       
+		       	</div>
+		       		
+		       </div>
+
+		  	<div class="col-sm-4">
+		  	<div class="row">
+		  		<div  class="col-sm-8  hoverBack">
+		  			<div class="text-left">
+		  			<img src="images/group_nav_support.jpg" class="img-responsive">
+		  		</div>
+		  		<div class="text-left">
+		  			在线技术支持、软件下载、文档共享，无论您遇到任何问题，我们都将随时为您提供服务。
+		  		</div>
+		  		</div>
+		  	</div>
+		  		
+		  	</div>
+		  </div>
+		  </div>
+		  <div role="tabpanel" class="tab-pane" id="tapContent05">
+		  	<div class="row">
+		  		<div class="col-sm-9 borderRight" >
+		  		   <div class="col-sm-3   tap05" v-for="item in items">
+		  		   	<div class="col-sm-12 itemTitle">{{item.title}}</div>
+		  			<div class="col-sm-12"><a class="alink">{{item.text01}}</a></div>
+		  			<div class="col-sm-12"><a class="alink">{{item.text02}}</a></div>
+		  			<div class="col-sm-12"><a class="alink">{{item.text03}}</a></div>
+		  			<div class="col-sm-12"><a class="alink">{{item.text04}}</a></div>
+		  			<div class="col-sm-12"><a class="alink">{{item.text05}}</a></div>
+		  		   </div>
+		  			
+		  			
+		  		</div>
+		  		<div class="col-sm-3">
+		  			<div class="row">
+
+		  				<div class="col-sm-8  tap05">
+		  					<div class="text-left rowItem" >
+		  						<span><i class="iconfont">&#xe737;</i></span>
+		  						<a href="" class="alink">渠道伙伴系统登录</a>
+		  					</div>
+		  					<div class="text-left rowItem" >
+		  						<span><i class="iconfont">&#xe611;</i></span>
+		  						<a href="" class="alink">解决方案伙伴系统登录</a>
+		  					</div>
+		  					<div class="text-left rowItem" >
+		  						<span><i class="iconfont">&#xe671;</i></span>
+		  						<a href="" class="alink">企业用户合作伙伴门户</a>
+		  					</div>
+		  				</div>
+		  			</div>
+		  		</div>
+		  	</div>
+		  </div>
+		  </div>
+<!-- banner -->
+<div class="banner">
+<div class="banner-content">
+	<div class="banner-content-text">
+		<img src="images/homepage_banner_text_cn_gci.png" class="img-responsive">
+		<button type="button" class="btn btn-danger banner-btn">了解更多></button>
+	</div>
+</div>
+</div>
+<!-- banner -->
+<!-- 卡片 -->
+<div class="card">
+	<div class="row  fistRow">
+		<div class="col-sm-6 cardFirst">
+			<div class="card-block">
+				<div class="card-img">
+					<img src="images/p10-mobilephone_cn2.jpg">
+				</div>
+				<div class="card-black"></div>
+				<div class="card-txt">
+					<h3 class="txt-title">每一拍都是大片</h3>
+					<p></p>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-6">
+		<div class="row cardFirstSon">
+			<div class="col-sm-12">
+				<div class="card-block">
+				<div class="card-img">
+					<img src="images/eric-xu-banner0.jpg">
+				</div>
+				<div class="card-black"></div>
+				<div class="card-txt">
+					<h3 class="txt-title"> 做多联接、撑大管道、使能行业数字化  </h3>
+					<p class="txt-content">华为轮值CEO徐直军谈华为战略：坚持做多联接、撑大管道、使能行业数字化的战略，聚焦ICT基础设施和智能终端，做智能社会的使能者和推动者。</p>
+				</div>
+			</div>
+			</div>
+
+			<div class="col-sm-12" id="marginTop">
+				<div class="card-block">
+				<div class="card-img">
+					<img src="images/davos.jpg">
+				</div>
+				<div class="card-black"></div>
+				<div class="card-txt">
+					<h3 class="txt-title">应势而为、勇于担当 </h3>
+					<p class="txt-content">华为公司董事长孙亚芳与全球100多家领先企业共同签署契约，承诺促进可持续发展。</p>
+				</div>
+			</div>
+			</div>
+		</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-6">
+			<div class="card-block">
+				<div class="card-img">
+					<img src="images/winwin27-banner.jpg">
+				</div>
+				<div class="card-black"></div>
+				<div class="card-txt">
+					<h3 class="txt-title"> 改造、提升、革新，XL Axiata的3R数字化战略</h3>
+					<p class="txt-content">XL Axiata CEO Dian Siswarini指出，数字化转型不仅涉及商业模式和产品的转型，也涉及员工心态的转变，转型要以合适的组织架构，以及政策和战略为支撑。</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-6">
+			<div class="card-block">
+				<div class="card-img">
+					<img src="images/mbb2020.jpg" >
+				</div>
+				<div class="card-black"></div>
+				<div class="card-txt">
+					<h3 class="txt-title">移动创造未来</h3>
+					<p class="txt-content">通过技术创新，华为与运营商和业界伙伴们齐心协力，构筑以应用为驱动的网络和建立开放、合作、可持续的生态链，共同开启更美好的移动全联接新未来。</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 卡片 -->
+<!-- 视频 -->
+<div class="video">
+	<div class="video-title text-center">
+		<h3>共建更美好的全连接世界</h3>
+	</div>
+	<div class="video-btn text-center">
+		<img id="btn-img" src="./images/video_btn.png"></img>
+	</div>
+</div>
+<!-- 视频 -->
+<!-- 新闻 -->
+<div class="news">
+	<div class="row">
+		<div class="col-sm-4">
+			<div class="news-title">
+				<h3><a href="">新闻</a></h3>
+			</div>
+		          <div class="news-content">
+		          	<p><a href="">华为携手Turkcell完成GU@5MHz商用验证 拉开安卡拉 TechCity2.0帷幕</a></p>
+		          	<p class="small">2017-04-21</p>
+		          	<p><a href="">土耳其沃达丰携手华为全球首次商用验证GL频谱共享解决方案</a></p>
+		          	<p class="small">2017-04-20</p>
+		          	 <p><a href="">华为荣膺六项云计算开源产业联盟大奖</a></p>
+		          	<p class="small">2017-04-20</p>
+		          </div>
+		</div>
+		<div class="col-sm-4">
+			<div class="news-title">
+				<h3><a href="">展会活动</a></h3>
+			</div>
+			<div class="news-content">
+				<img src="images/hannover-messe-2017.jpg" class="img-responsive">
+				<h4><a href="">2017汉诺威工业博览会</a></h4>
+				<p>新ICT，迈向数字化转型之路</p>
+                                            <p>德国，汉诺威 4月24日-28日</p>
+			</div>
+		</div>
+		<div class="col-sm-4">
+			<div class="news-title" style="visibility: hidden;">
+				<h3><a href="">展会活动</a></h3>
+			</div>
+			<div class="news-content">
+				<img src="images/has17.jpg" class="img-responsive">
+				<h4><a href="">2017华为全球分析师大会（英文）</a></h4>
+				<p>Go Digital, Go Cloud</p>
+				<p>中国，深圳 4月11日-13日</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 新闻 -->
+<!-- 底部菜单 -->
+<div class="footer">
+	<div class="row">
+		<div class="col-sm-8">
+			<div class="row">
+				<div class="col-sm-3">
+					<div class="footerMenu-title">
+						<h4>按访问者</h4>
+						<span class="glyphicon glyphicon-menu-down  fontMenuIcon" aria-hidden="true"></span>
+					</div>
+					<ul class="footerMeun-lists list-unstyled">
+						<li><a>个人用户</a></li>
+						<li><a>企业用户</a></li>
+						<li><a>运营商用户</a></li>
+						<li><a>合作伙伴</a></li>
+						<li><a>新闻媒体</a></li>
+						<li><a>开发者</a></li>
+						<li><a>供应商</a></li>
+						<li><a>求职者</a></li>
+					</ul>
+				</div>
+				<div class="col-sm-3">
+					<div class="footerMenu-title">
+						<h4>关于华为</h4>
+						<span class="glyphicon glyphicon-menu-down fontMenuIcon" aria-hidden="true"></span>
+
+					</div>
+					<ul class="footerMeun-lists list-unstyled">
+						<li><a>公司简介</a></li>
+						<li><a>公司治理</a></li>
+						<li><a>高管信息</a></li>
+						<li><a>债券投资者关系</a></li>
+						<li><a>可持续发展</a></li>
+						<li><a>网络安全</a></li>
+						<li><a>出版物</a></li>
+						<li><a>公司年报</a></li>
+					</ul>
+				</div>
+				<div class="col-sm-3">
+					<div class="">
+						<div class="footerMenu-title">
+						<h4>新闻 & 展会</h4>
+						<span class="glyphicon glyphicon-menu-down  fontMenuIcon" aria-hidden="true"></span>
+
+					          </div>
+					<ul class="footerMeun-lists list-unstyled">
+						<li><a>新闻</a></li>
+						<li><a>安全通告</a></li>
+						<li><a>展会活动</a></li>
+					</ul>
+					</div>
+					<div>
+						<div class="footerMenu-title">
+						<h4>行业洞察</h4>
+						<span class="glyphicon glyphicon-menu-right  fontMenuIcon" aria-hidden="true"></span>
+
+					          </div>
+						<ul class="footerMeun-lists list-unstyled" id="hideUl">
+						<li><a>全联接世界</a></li>
+						<li><a>全球联接指数</a></li>
+						</ul>
+					</div>
+
+				</div>
+				<div class="col-sm-3">
+					<div class="footerMenu-title">
+						<h4>快速链接</h4>
+						<span class="glyphicon glyphicon-menu-down  fontMenuIcon" aria-hidden="true"></span>
+
+					</div>
+					<ul class="footerMeun-lists list-unstyled">
+						<li><a>华为商城</a></li>
+						<li><a>荣耀官网</a></li>
+						<li><a>产品定义社区</a></li>
+						<li><a>心声社区</a></li>
+						<li><a>除名查询</a></li>
+						<li><a>在线反馈</a></li>
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-4 aboutUS">
+		<div class="row">
+		<div class="col-sm-12">
+			<div class="footerMenuLast-title">
+				<h4>关于我们</h4>
+			</div>
+			<ul class="footerMeunLast-lists list-unstyled">
+				<li class="fonterIcon"><img src="images/hw_u_396239.png"><img src="images/logo_linkedin.png"></li>
+				<li class="wxcode displayHide"><img src="images/hw_408955.jpg"></li>
+				<li class="displayHide"><a>官方微信</a></li>
+										
+			</ul>
+			</div>
+			</div>
+		</div>
+	</div>
+	<div class="row footerLast">
+		<div class="col-sm-6 displayHide">©2017 华为技术有限公司    粤A2-20044005号</div>
+		<div class="col-sm-6 text-right fontCenter">法律声明|隐私保护|联系我们</div>
+	</div>
+</div>
+<!-- 底部菜单 -->
+</div>
+<!-- 黑色背景 -->
+<div class="layerBlack"></div>
+<!-- 黑色背景 -->
+<!-- 视频弹窗 -->
+<div class="layer">
+ <i class="iconfont" id="closeIcon">&#xe662;</i>
+	<video id="my-video" class="video-js vjs-big-play-centered" controls preload="auto" width="640" height="264"
+		  poster="MY_VIDEO_POSTER.jpg" data-setup="{}">
+			<source src="video/Building_a_Better_Connected_World_201620160905.mp4" type="video/mp4">
+			<source src="video/Building_a_Better_Connected_World_201620160905.webm" type="video/webm">
+			<p class="vjs-no-js">
+			  To view this video please enable JavaScript, and consider upgrading to a web browser that
+			  <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+			</p>
+		  </video>
+</div>
+<!-- 视频弹窗 -->
+<!-- 手风琴菜单 -->
+<div class="contaner-full sideMenu">
+	<div class="row sideMenuHeader borderBottom">
+		<div class="col-xs-6 menuItemTitle">
+			首页
+		</div>
+		<div class="col-xs-6 text-right">
+			 <i class="iconfont" id="close">&#xe662;</i>
+		</div>
+	</div>
+	<div class="sideMenuItem" v-for="item in items">
+		<div class="itemFa borderBottom">
+			<a href="">{{item.title}}</a>
+			<span v-bind:class="item.icon" aria-hidden="true"></span>
+		</div>
+                 
+			<ul class="itemSon list-unstyled ulBorder" v-for="menuItem in item.menuItems" >
+				<li class="sonList borderBottom menuItemTitle">{{menuItem.title}}</li>
+				
+				<li class="sonList borderBottom hasTitle"  v-for="sonItem in menuItem.menuSon">{{sonItem.text}}
+				</li>
+			</ul>
+		
+		</div>
+	</div>
+<!-- 手风琴菜单 -->
+<script type="text/javascript">
+	
+</script>
+<script src="js/jquery-3.1.1.js"></script>
+<script type="text/javascript" src="plugin/video5.18.4.js/js/video.min.js"></script>
+
+<script type="text/javascript" src="js/vue.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>
